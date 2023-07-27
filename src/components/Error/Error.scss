@@ -1,0 +1,42 @@
+@import '../../styles/variables';
+
+.error {
+  margin-top: 50px;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+
+  @media (min-width: $tablet) {
+    margin-top: 132px;
+  }
+
+  &__icon {
+    width: 48px;
+    height: 48px;
+
+    @media (min-width: $tablet) {
+      width: 64px;
+      height: 64px;
+    }
+  }
+
+  &__title {
+    font-weight: $fw-bold;
+    font-size: $fs-smallheading-s;
+    line-height: $lh-smallheading-s;
+
+    @media (min-width: $tablet) {
+      margin-top: 20px;
+      font-size: $fs-smallheading-m;
+      line-height: $lh-smallheading-m;
+    }
+  }
+
+  &__message {
+    color: $clr-400;
+  }
+}

@@ -1,0 +1,12 @@
+@import '../../styles/variables';
+
+.container {
+  max-width: 736px;
+  margin: 0 auto;
+  padding: 24px;
+  box-sizing: content-box;
+
+  @media (min-width: $tablet) {
+    padding: 58px 40px;
+  }
+}

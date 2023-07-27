@@ -1,0 +1,63 @@
+@import '../../styles/variables';
+
+.word-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-top: 24px;
+
+  @media (min-width: 768px) {
+    margin-top: 42px;
+  }
+
+  &__details {
+
+    &-word {
+      font-size: $fs-heading-s;
+      line-height: $lh-heading-s;
+      font-weight: $fw-bold;
+
+      @media (min-width: 768px) {
+        font-size: $fs-heading-m;
+        line-height: $lh-heading-m;
+      }
+    }
+
+    &-phonetic {
+      font-size: $fs-subheading-s;
+      line-height: $lh-subheading-s;
+      font-weight: $fw-regular;
+      color: $clr-purple;
+      margin-top: 8px;
+
+      @media (min-width: 768px) {
+        font-size: $fs-subheading-m;
+        line-height: $lh-subheading-m;
+      }
+    }
+  }
+
+  &__btn {
+    height: 48px;
+    width: 48px;
+    cursor: pointer;
+
+    circle, path {
+      transition: all 0.3s;
+    }
+
+    &:hover circle {
+      opacity: 1;
+    }
+
+    &:hover path {
+      fill: white;
+    }
+
+    @media (min-width: 768px) {
+      height: 75px;
+      width: 75px;
+    }
+  }
+}

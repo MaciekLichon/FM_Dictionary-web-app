@@ -1,0 +1,127 @@
+@import './variables.scss';
+
+body {
+  font-family: $ff-inter;
+  font-weight: $fw-regular;
+  font-size: $fs-body-s;
+  line-height: $lh-body-s;
+  color: $clr-600;
+
+  @media (min-width: $tablet) {
+    font-size: $fs-body-m;
+  }
+
+  &.mono {
+    font-family: $ff-inconsolata;
+  }
+
+  &.serif {
+    font-family: $ff-lora;
+  }
+
+  &.dark {
+    background-color: $clr-800;
+    color: $clr-100;
+
+    input[type="text"] {
+      background-color: $clr-700;
+      color: $clr-100;
+    }
+
+    input[type="text"]::placeholder {
+      color: $clr-100;
+    }
+
+    a {
+      color: $clr-100;
+    }
+
+    .header__controls-mode path {
+      stroke: $clr-purple;
+    }
+
+    .header__controls-mode button {
+      background-color: $clr-purple;
+
+      &::after {
+        left: calc(100% - 14px - 3px);
+      }
+    }
+
+    .header__controls-fontMenu {
+      background-color: $clr-700;
+      box-shadow: 0 5px 30px 0 #A445ED;
+    }
+  }
+
+  @media (prefers-color-scheme: dark) {
+    background-color: $clr-800;
+    color: $clr-100;
+
+    input[type="text"] {
+      background-color: $clr-700;
+      color: $clr-100;
+    }
+
+    input[type="text"]::placeholder {
+      color: $clr-100;
+    }
+
+    a {
+      color: $clr-100;
+    }
+
+    .header__controls-mode path {
+      stroke: $clr-purple;
+    }
+
+    .header__controls-mode button {
+      background-color: $clr-purple;
+
+      &::after {
+        left: calc(100% - 14px - 3px);
+      }
+    }
+
+    .header__controls-fontMenu {
+      background-color: $clr-700;
+      box-shadow: 0 5px 30px 0 #A445ED;
+    }
+  }
+}
+
+a {
+  color: $clr-600;
+}
+
+button {
+  padding: 0;
+  border: none;
+  background: none;
+  color: inherit;
+}
+
+input[type="text"] {
+  padding: 14px 56px 14px 24px;
+  border: none;
+  border-radius: 16px;
+  background-color: $clr-200;
+  font-size: $fs-input-s;
+  line-height: 20px;
+  font-weight: $fw-bold;
+  color: $clr-600;
+
+  @media (min-width: $tablet) {
+    padding: 20px 56px 20px 24px;
+    font-size: $fs-input-m;
+  }
+}
+
+input[type="text"]::placeholder {
+  opacity: 0.25;
+}
+
+input[type="text"]:focus {
+  outline-width: 1px;
+  outline-color: $clr-purple;
+}

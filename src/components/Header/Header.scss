@@ -1,0 +1,218 @@
+@import '../../styles/variables';
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  font-size: $fs-nav-s;
+
+  @media (min-width: $tablet) {
+    gap: 52px;
+    font-size: $fs-nav-m;
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    width: 28px;
+    height: 32px;
+
+    @media (min-width: $tablet) {
+      width: 32px;
+      height: 36px;
+    }
+  }
+
+  &__controls {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    height: 32px;
+
+    @media (min-width: $tablet) {
+      gap: 26px;
+    }
+
+    &-item {
+      display: flex;
+      align-items: center;
+      height: 100%;
+    }
+
+    &-fontContainer {
+      position: relative;
+      height: 100%;
+      display: flex;
+      align-items: center;
+
+      &:hover .header__controls-fontMenu {
+        grid-template-rows: 1fr;
+      }
+    }
+
+    &-fontMenu {
+      position: absolute;
+      display: grid;
+      grid-template-rows: 0fr;
+      top: 100%;
+      right: 26px;
+      z-index: 1000;
+
+      transition: grid-template-rows 0.3s;
+
+      & > div {
+        overflow: hidden;
+        display: grid;
+
+        justify-items: start;
+        gap: 16px;
+
+        font-weight: $fw-bold;
+
+        width: 183px;
+        background-color: $clr-100;
+        border-radius: 16px;
+        box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.10);
+      }
+
+      &-item {
+        cursor: pointer;
+        padding: 0 24px;
+        transition: color 0.3s;
+
+        &:first-child {
+          padding-top: 24px;
+        }
+
+        &:last-child {
+          padding-bottom: 24px;
+        }
+
+        &:hover {
+          color: $clr-purple;
+        }
+
+        &.sans {
+          font-family: $ff-inter;
+        }
+
+        &.serif {
+          font-family: $ff-lora;
+        }
+
+        &.mono {
+          font-family: $ff-inconsolata;
+        }
+      }
+    }
+
+    &-fonts {
+      cursor: pointer;
+      gap: 16px;
+      padding-right: 16px;
+      position: relative;
+      font-weight: $fw-bold;
+
+      @media (min-width: $tablet) {
+        gap: 18px;
+        padding-right: 26px;
+      }
+
+      &::after {
+        position: absolute;
+        content: '';
+        right: 0;
+        top: 0;
+        width: 1px;
+        height: 100%;
+        background-color: $clr-300;
+      }
+
+      img {
+        width: 12px;
+        height: 6px;
+      }
+    }
+
+    &-mode {
+      gap: 12px;
+
+      @media (min-width: $tablet) {
+        gap: 20px;
+      }
+
+      svg {
+        width: 20px;
+        height: 20px;
+      }
+
+      button {
+        width: 40px;
+        height: 20px;
+        border-radius: 10px;
+        background-color: $clr-400;
+        padding: 3px;
+        position: relative;
+        transition: background-color 0.3s;
+        cursor: pointer;
+
+        &:hover {
+          background-color: $clr-purple;
+        }
+
+        &::after {
+          content: '';
+          position: absolute;
+          left: 3px;
+          top: 3px;
+          width: 14px;
+          height: 14px;
+          background-color: $clr-100;
+          border-radius: 50%;
+          transition: left 0.3s;
+        }
+      }
+    }
+  }
+
+  &__form {
+    position: relative;
+
+    &-field {
+      width: 100%;
+
+      &-empty {
+        outline: 1px solid $clr-red;
+      }
+    }
+
+    &-errorMsg {
+      color: $clr-red;
+      font-size: $fs-input-s;
+      margin-top: 8px;
+
+      @media (min-width: $tablet) {
+        font-size: $fs-input-m;
+      }
+    }
+
+    &-btn {
+      position: absolute;
+      height: 16px;
+      width: 16px;
+      right: 24px;
+      top: 16px;
+      cursor: pointer;
+
+      @media (min-width: $tablet) {
+        top: 24px;
+      }
+    }
+  }
+}
+

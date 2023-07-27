@@ -1,0 +1,39 @@
+@import '../../styles/variables';
+
+.source {
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid $clr-300;
+  font-size: $fs-source-s;
+  line-height: $lh-source-s;
+
+  @media (min-width: $tablet) {
+    margin-top: 40px;
+    padding-top: 20px;
+
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  &__title {
+    text-decoration: underline;
+    color: $clr-400;
+    margin-bottom: 7px;
+
+    @media (min-width: $tablet) {
+      margin: 0;
+    }
+  }
+
+  &__path {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    &-icon {
+      width: 12px;
+      height: 12px;
+    }
+  }
+}
