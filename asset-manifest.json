@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/FM_Dictionary-web-app/static/css/main.208a4546.css",
+    "main.css": "/FM_Dictionary-web-app/static/css/main.40007901.css",
     "main.js": "/FM_Dictionary-web-app/static/js/main.44ed5f1a.js",
     "index.html": "/FM_Dictionary-web-app/index.html",
     "static/media/icon-new-window.svg": "/FM_Dictionary-web-app/static/media/icon-new-window.17ac2f0f91916515096e759611fdaea9.svg",
     "static/media/logo.svg": "/FM_Dictionary-web-app/static/media/logo.afbe15e827b060eab1c775e3afad2b73.svg",
     "static/media/icon-search.svg": "/FM_Dictionary-web-app/static/media/icon-search.13357ba7763bb4388cba203d0388c375.svg",
     "static/media/icon-arrow-down.svg": "/FM_Dictionary-web-app/static/media/icon-arrow-down.aa902848ffe2b4ed5369af17076de50d.svg",
-    "main.208a4546.css.map": "/FM_Dictionary-web-app/static/css/main.208a4546.css.map",
+    "main.40007901.css.map": "/FM_Dictionary-web-app/static/css/main.40007901.css.map",
     "main.44ed5f1a.js.map": "/FM_Dictionary-web-app/static/js/main.44ed5f1a.js.map"
   },
   "entrypoints": [
-    "static/css/main.208a4546.css",
+    "static/css/main.40007901.css",
     "static/js/main.44ed5f1a.js"
   ]
 }
